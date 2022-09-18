@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iSmRYUbXa5cvwNhbfKWfC8PHvaRMQhhaN0Rv0H2Z9Mk8V82WhQFg1gAeAj8FsdrroINKklizCM9bN+7wRz7O+Q==",
+  "dgSpecHash": "OWQqv0tugh9v11o7bdG2IPoykL7oIaUlzIYBn6wKYPC/gVM/HDKMZaSy3NOkW+kSUIEcW4aixfPXc8CTc6jWVQ==",
   "success": true,
-  "projectFilePath": "C:\\WebTic\\MascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj",
+  "projectFilePath": "C:\\WebTic\\MascotaFelizBitCoders.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

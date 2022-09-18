@@ -1,18 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\WebTic\\MascotaFeliz.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj": {}
+    "C:\\WebTic\\MascotaFelizBitCoders.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj": {}
   },
   "projects": {
-    "C:\\WebTic\\MascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj": {
+    "C:\\WebTic\\MascotaFelizBitCoders.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\WebTic\\MascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj",
+        "projectUniqueName": "C:\\WebTic\\MascotaFelizBitCoders.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj",
         "projectName": "MascotaFeliz.App.Dominio",
-        "projectPath": "C:\\WebTic\\MascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj",
+        "projectPath": "C:\\WebTic\\MascotaFelizBitCoders.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj",
         "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-        "outputPath": "C:\\WebTic\\MascotaFeliz.App\\MascotaFeliz.App.Dominio\\obj\\",
+        "outputPath": "C:\\WebTic\\MascotaFelizBitCoders.App\\MascotaFeliz.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
@@ -57,15 +60,18 @@
         }
       }
     },
-    "C:\\WebTic\\MascotaFeliz.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj": {
+    "C:\\WebTic\\MascotaFelizBitCoders.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\WebTic\\MascotaFeliz.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj",
+        "projectUniqueName": "C:\\WebTic\\MascotaFelizBitCoders.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj",
         "projectName": "MascotaFeliz.App.Persistencia",
-        "projectPath": "C:\\WebTic\\MascotaFeliz.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj",
+        "projectPath": "C:\\WebTic\\MascotaFelizBitCoders.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj",
         "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-        "outputPath": "C:\\WebTic\\MascotaFeliz.App\\MascotaFeliz.App.Persistencia\\obj\\",
+        "outputPath": "C:\\WebTic\\MascotaFelizBitCoders.App\\MascotaFeliz.App.Persistencia\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
@@ -79,8 +85,8 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\WebTic\\MascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj": {
-                "projectPath": "C:\\WebTic\\MascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj"
+              "C:\\WebTic\\MascotaFelizBitCoders.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj": {
+                "projectPath": "C:\\WebTic\\MascotaFelizBitCoders.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj"
               }
             }
           }

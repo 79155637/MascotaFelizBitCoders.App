@@ -5974,17 +5974,21 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\david\\.nuget\\packages\\": {}
+    "C:\\Users\\david\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\WebTic\\MascotaFeliz.App\\MascotaFeliz.App.FrontEnd\\MascotaFeliz.App.FrontEnd.csproj",
+      "projectUniqueName": "C:\\WebTic\\MascotaFelizBitCoders.App\\MascotaFeliz.App.FrontEnd\\MascotaFeliz.App.FrontEnd.csproj",
       "projectName": "MascotaFeliz.App.FrontEnd",
-      "projectPath": "C:\\WebTic\\MascotaFeliz.App\\MascotaFeliz.App.FrontEnd\\MascotaFeliz.App.FrontEnd.csproj",
+      "projectPath": "C:\\WebTic\\MascotaFelizBitCoders.App\\MascotaFeliz.App.FrontEnd\\MascotaFeliz.App.FrontEnd.csproj",
       "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-      "outputPath": "C:\\WebTic\\MascotaFeliz.App\\MascotaFeliz.App.FrontEnd\\obj\\",
+      "outputPath": "C:\\WebTic\\MascotaFelizBitCoders.App\\MascotaFeliz.App.FrontEnd\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
@@ -5998,11 +6002,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\WebTic\\MascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj": {
-              "projectPath": "C:\\WebTic\\MascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj"
+            "C:\\WebTic\\MascotaFelizBitCoders.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj": {
+              "projectPath": "C:\\WebTic\\MascotaFelizBitCoders.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj"
             },
-            "C:\\WebTic\\MascotaFeliz.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj": {
-              "projectPath": "C:\\WebTic\\MascotaFeliz.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj"
+            "C:\\WebTic\\MascotaFelizBitCoders.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj": {
+              "projectPath": "C:\\WebTic\\MascotaFelizBitCoders.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj"
             }
           }
         }
