@@ -38,7 +38,7 @@ namespace MascotaFeliz.App.Persistencia.AppRepositorios
       return _appContextDV.Mascotas;
     }
 
-    Mascota IRepositorioMascota.GetAllMascota(int idMascota)
+    Mascota IRepositorioMascota.GetMascota(int idMascota)
     {
       return _appContextDV.Mascotas.FirstOrDefault(p => p.Id == idMascota);
     }
