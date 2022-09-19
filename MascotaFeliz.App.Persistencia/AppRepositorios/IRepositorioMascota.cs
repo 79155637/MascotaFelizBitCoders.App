@@ -12,6 +12,6 @@ namespace MascotaFeliz.App.Persistencia.AppRepositorios
     Mascota AddMascota(Mascota mascota);
     Mascota UpdateMascota(Mascota mascota);
     void DeleteMascota(int idMascota);
-    Mascota GetAllMascota(int idMascota);
+    Mascota GetMascota(int idMascota);
   }
 }
