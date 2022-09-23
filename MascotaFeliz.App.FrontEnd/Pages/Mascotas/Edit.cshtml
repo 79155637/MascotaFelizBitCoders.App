@@ -1,0 +1,54 @@
+﻿@page
+@model MascotaFeliz.App.FrontEnd.Pages.EditModel
+@{
+    int MascotaId=Model.Mascota.Id;
+}
+
+<h2>Edición de los datos del Mascota:  @Model.Mascota.Id @Model.Mascota.Nombre @Model.Mascota.Color  @Model.Mascota.Raza </h2>
+<form method="post">
+    <input type="hidden" asp-for="Mascota.Id" />
+    <div class="form-group">
+        <label asp-for="Mascota.Nombre"></label>
+        <input asp-for="Mascota.Nombre" class="form-control">
+        <span class="text-danger" asp-validation-for="Mascota.Nombre"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Mascota.Color"></label>
+        <input asp-for="Mascota.Color" class="form-control">
+        <span class="text-danger" asp-validation-for="Mascota.Color"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Mascota.Raza"></label>
+        <input asp-for="Mascota.Raza" class="form-control">
+        <span class="text-danger" asp-validation-for="Mascota.Raza"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Mascota.Genero"></label>
+        <input asp-for="Mascota.Genero" class="form-control">
+        <span class="text-danger" asp-validation-for="Mascota.Genero"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Mascota.FechaNacimiento"></label>
+        <input asp-for="Mascota.FechaNacimiento" class="form-control">
+        <span class="text-danger" asp-validation-for="Mascota.FechaNacimiento"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Mascota.Cliente.Id"></label>
+        <input asp-for="Mascota.Cliente.Id" class="form-control">
+        <span class="text-danger" asp-validation-for="Mascota.Cliente.Id"></span>
+    </div>
+   <div class="form-group">
+        <label asp-for="Mascota.Veterinario.Id"></label>
+        <input asp-for="Mascota.Veterinario.Id" class="form-control">
+        <span class="text-danger" asp-validation-for="Mascota.Veterinario.Id"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Grabar</button>
+
+    @*<a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-MascotaId="@Mascota.Id">
+        <i  class="fas fa-address-book fa-lg" aria-hidden="true">Visitas</i>
+    </a>*@
+</form>
+<a asp-page="./List" class="btn btn-primary"> Volver a la lista de Mascotas </a>
+

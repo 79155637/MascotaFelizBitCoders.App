@@ -6,6 +6,20 @@
 <h1>Listado de Mascotas</h1>
 
 <table class="table">
+      @*<thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => Model.Mascotas.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => Model.Mascotas.Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => Model.Mascotas.Raza)
+            </th>
+            <th></th>
+        </tr>
+    </thead>*@
     @foreach (var mascota in Model.Mascotas)
     {
         <tr>
@@ -14,15 +28,20 @@
             <td>@mascota.Raza</td>
             <td>
                 <a class="btn btn-primary table-btn" asp-page="./Details" asp-route-mascotaID="@mascota.Id">
-                    <i class="fas fa-info-circle fa-lg"></i> </a>
+                    <i class="fas fa-info-circle fa-lg"></i> Detalle </a>
             </td>
 
             <td>
                 <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-mascotaId="@mascota.Id">
-                    <i class="fas fa-address-book fa-lg" aria-hidden="true"></i>
+                    <i class="fas fa-address-book fa-lg" aria-hidden="true"> Edición </i>
+                </a>
+            </td>
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="./Delete" asp-route-mascotaId="@mascota.Id">
+                    <i class="fas fa-address-book fa-lg" aria-hidden="true"> Borrar </i>
                 </a>
             </td </tr>
     }
 </table>
 
-<a asp-page=".\Edit" class="btn btn-primary">Adicionar una Mascota</a>
+<a asp-page=".\Edit" class="btn btn-primary"> Adicionar una Mascota </a>

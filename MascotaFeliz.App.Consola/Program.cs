@@ -17,7 +17,7 @@ namespace MascotaFeliz.App.Consola
     //AddCliente();
     //AddVeterinario();
     //AddMascota();
-    AddVisita();
+    //AddVisita();
     }
     private static void AddCliente()
     {
@@ -39,7 +39,7 @@ namespace MascotaFeliz.App.Consola
         Nombre = "Negra",
         Color = "Negro",
         Raza = "Indeterminada",
-        Genero = Genero.Macho,
+        Genero = Genero.Hembra,
         FechaNacimiento = new DateTime(2010, 08, 25)
 
       };

@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using MascotaFeliz.App.Dominio.Entidades;
 
 namespace MascotaFeliz.App.Persistencia.AppRepositorios
@@ -19,16 +21,15 @@ namespace MascotaFeliz.App.Persistencia.AppRepositorios
 
     }
 
-    void IRepositorioMascota.DeleteMascota(int idmascota)
+    Mascota IRepositorioMascota.DeleteMascota(int idMascota)
     {
-      var mascotaEncontrado = _appContextDV.Mascotas.FirstOrDefault(p => p.Id == idmascota);
-      if (mascotaEncontrado == null)
+      var mascotaEncontrado = _appContextDV.Mascotas.Include(c => c.Cliente).Include(v => v.Veterinario).FirstOrDefault(p => p.Id == idMascota);
+      if (mascotaEncontrado != null)
       {
-        return;
+        _appContextDV.Mascotas.Remove(mascotaEncontrado);
+        _appContextDV.SaveChanges();
       }
-
-      _appContextDV.Mascotas.Remove(mascotaEncontrado);
-      _appContextDV.SaveChanges();
+       return mascotaEncontrado;
     }
 
 
@@ -40,15 +41,25 @@ namespace MascotaFeliz.App.Persistencia.AppRepositorios
 
     Mascota IRepositorioMascota.GetMascota(int idMascota)
     {
-      return _appContextDV.Mascotas.FirstOrDefault(p => p.Id == idMascota);
+      return _appContextDV.Mascotas.Include(c => c.Cliente).Include(v => v.Veterinario).FirstOrDefault(p => p.Id == idMascota);
     }
     Mascota IRepositorioMascota.UpdateMascota(Mascota mascota)
     {
-      var mascotaEncontrado = _appContextDV.Mascotas.FirstOrDefault(p => p.Id == mascota.Id);
+      var mascotaEncontrado = _appContextDV.Mascotas.Include(c => c.Cliente).Include(v => v.Veterinario).FirstOrDefault(p => p.Id == mascota.Id);
       if (mascotaEncontrado != null)
       {
         mascotaEncontrado.Id = mascota.Id;
-        // mascotaEncontrado.Cliente = mascota.Cliente;
+
+        /* {
+           var clienteEncontrado = _appContextDV.Clientes.FirstOrDefault(c => c.Id == mascota.ClienteId);
+           return clienteEncontrado;
+         }*/
+
+        var clienteEncontrado = _appContextDV.Personas.OfType<Cliente>().FirstOrDefault(c => c.Id == mascota.Cliente.Id);
+        if (clienteEncontrado != null)
+        {
+          mascotaEncontrado.Cliente = clienteEncontrado;
+        }
         mascotaEncontrado.Nombre = mascota.Nombre;
         mascotaEncontrado.Color = mascota.Color;
         mascotaEncontrado.Raza = mascota.Raza;
