@@ -1,10 +1,14 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MascotaFeliz.App.Dominio.Entidades;
 using MascotaFeliz.App.Persistencia.AppRepositorios;
 
 
-namespace MascotaFeliz.App.FrontEnd.Pages
+namespace MascotaFeliz.App.FrontEnd.Pages.Mascotas
 {
   public class DeleteModel : PageModel
   {
@@ -19,11 +23,11 @@ namespace MascotaFeliz.App.FrontEnd.Pages
     }
 
 
-    public IActionResult OnGet(int? mascotaId)
+    public IActionResult OnGet(int mascotaId)
     {
-      if (mascotaId.HasValue)
+
       {
-        Mascota = repositorioMascotas.GetMascota(mascotaId.Value);
+        Mascota = repositorioMascotas.GetMascota(mascotaId);
       }
       if (Mascota == null)
       {
