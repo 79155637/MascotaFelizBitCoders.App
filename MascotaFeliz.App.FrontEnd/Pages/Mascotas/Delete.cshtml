@@ -1,7 +1,11 @@
-﻿@page
+@page
 @model MascotaFeliz.App.FrontEnd.Pages.Mascotas.DetailsModel
 @{
+  int MascotaId=Model.Mascota.Id;
 }
+<h1>Borrar</h1>
+
+<h3>Esta SEGURO de querer BORRAR esta MASCOTA?</h3>
 <h2>Datos Detallados de @Model.Mascota.Nombre: </h2>
 <div>
     IDENTIFICACIÓN: @Model.Mascota.Id
@@ -21,12 +25,16 @@
 <div>
     FechaNacimiento: @Model.Mascota.FechaNacimiento
 </div>
-
+@*
 <div>
    Cliente Id: @Model.Mascota.Cliente.Id Nombre: @Model.Mascota.Cliente.Nombre @Model.Mascota.Cliente.Apellidos 
 </div>
 <div>
     Veterinario Id: @Model.Mascota.Veterinario.Id Nombre: @Model.Mascota.Veterinario.Nombre @Model.Mascota.Veterinario.Apellidos
+</div>*@
+ <form method="post">
+        <input type="hidden" asp-for="Mascota.Id" />
+        <input type="submit" value="Borrar" class="btn btn-danger" /> |
+        <a asp-page="./List"> Retornar a Lista de Mascotas</a>
+    </form>
 </div>
-
-<a asp-page="./List" class="btn btn-primary"> Volver a la Lista de Mascotas </a>

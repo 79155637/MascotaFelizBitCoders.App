@@ -161,3 +161,5 @@ C:\WebTic\MascotaFelizBitCoders.App\MascotaFeliz.App.FrontEnd\obj\Debug\netcorea
 C:\WebTic\MascotaFelizBitCoders.App\MascotaFeliz.App.FrontEnd\obj\Debug\netcoreapp3.1\MascotaFeliz.App.FrontEnd.pdb
 C:\WebTic\MascotaFelizBitCoders.App\MascotaFeliz.App.FrontEnd\obj\Debug\netcoreapp3.1\MascotaFeliz.App.FrontEnd.genruntimeconfig.cache
 C:\WebTic\MascotaFelizBitCoders.App\MascotaFeliz.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Mascotas\Details.cshtml.g.cs
+C:\WebTic\MascotaFelizBitCoders.App\MascotaFeliz.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Mascotas\Edit.cshtml.g.cs
+C:\WebTic\MascotaFelizBitCoders.App\MascotaFeliz.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Mascotas\Delete.cshtml.g.cs

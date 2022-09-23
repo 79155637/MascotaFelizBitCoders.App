@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "OWQqv0tugh9v11o7bdG2IPoykL7oIaUlzIYBn6wKYPC/gVM/HDKMZaSy3NOkW+kSUIEcW4aixfPXc8CTc6jWVQ==",
+  "dgSpecHash": "e156zjmT4e+IMAwms57Pnal5p8aHUoBVy3M/r/j228MLA6hLeRxMvMbjpLxyN7T6xeGHfj6Ra6+bZMXES4QMSA==",
   "success": true,
   "projectFilePath": "C:\\WebTic\\MascotaFelizBitCoders.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\david\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
