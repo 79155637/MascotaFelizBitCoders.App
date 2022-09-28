@@ -18,7 +18,7 @@ namespace MascotaFeliz.App.Persistencia.AppRepositorios
       if (!optionsBuilder.IsConfigured)
       {
         optionsBuilder
-        .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = MascotaFeliz_0");
+        .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = MascotaFeliz");
       }
     }
   }

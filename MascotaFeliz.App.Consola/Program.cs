@@ -14,10 +14,10 @@ namespace MascotaFeliz.App.Consola
     static void Main(string[] args)
     {
       Console.WriteLine("Hello World! Entity Framework David Velandia");
-    //AddCliente();
-    //AddVeterinario();
-    //AddMascota();
-    //AddVisita();
+    AddCliente();
+    AddVeterinario();
+    AddMascota();
+    AddVisita();
     }
     private static void AddCliente()
     {
@@ -64,7 +64,7 @@ namespace MascotaFeliz.App.Consola
     {
       var visita = new Visita
       {
-        Veterinario = 1,
+        //Veterinario = 1,
         FechaVisita = new DateTime(2022, 09, 01),
         Temperatura = 36.5F,
         Peso = 25,

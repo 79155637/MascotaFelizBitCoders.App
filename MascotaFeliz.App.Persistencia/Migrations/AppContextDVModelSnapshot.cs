@@ -15,22 +15,24 @@ namespace MascotaFeliz.App.Persistencia.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .UseIdentityColumns()
+                .HasAnnotation("ProductVersion", "3.1.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.0");
+                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("MascotaFeliz.App.Dominio.Entidades.Mascota", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int?>("ClienteId")
                         .HasColumnType("int");
 
                     b.Property<string>("Color")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(20)")
+                        .HasMaxLength(20);
 
                     b.Property<DateTime>("FechaNacimiento")
                         .HasColumnType("datetime2");
@@ -39,10 +41,14 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Nombre")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(30)")
+                        .HasMaxLength(30);
 
                     b.Property<string>("Raza")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(30)")
+                        .HasMaxLength(30);
 
                     b.Property<int?>("VeterinarioId")
                         .HasColumnType("int");
@@ -61,10 +67,12 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Apellidos")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(30)")
+                        .HasMaxLength(30);
 
                     b.Property<string>("CorreoElectronico")
                         .HasColumnType("nvarchar(max)");
@@ -74,7 +82,9 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nombre")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(30)")
+                        .HasMaxLength(30);
 
                     b.Property<string>("NumeroTelefono")
                         .HasColumnType("nvarchar(max)");
@@ -91,7 +101,7 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int?>("ClienteId")
                         .HasColumnType("int");
@@ -141,9 +151,6 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                 {
                     b.HasBaseType("MascotaFeliz.App.Dominio.Entidades.Persona");
 
-                    b.Property<int>("IdMascota")
-                        .HasColumnType("int");
-
                     b.HasDiscriminator().HasValue("Cliente");
                 });
 
@@ -173,16 +180,12 @@ namespace MascotaFeliz.App.Persistencia.Migrations
             modelBuilder.Entity("MascotaFeliz.App.Dominio.Entidades.Mascota", b =>
                 {
                     b.HasOne("MascotaFeliz.App.Dominio.Entidades.Cliente", "Cliente")
-                        .WithMany()
+                        .WithMany("Mascotas")
                         .HasForeignKey("ClienteId");
 
                     b.HasOne("MascotaFeliz.App.Dominio.Entidades.Veterinario", "Veterinario")
                         .WithMany()
                         .HasForeignKey("VeterinarioId");
-
-                    b.Navigation("Cliente");
-
-                    b.Navigation("Veterinario");
                 });
 
             modelBuilder.Entity("MascotaFeliz.App.Dominio.Entidades.Visita", b =>
@@ -198,12 +201,6 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                     b.HasOne("MascotaFeliz.App.Dominio.Entidades.Veterinario", "Veterinario")
                         .WithMany()
                         .HasForeignKey("VeterinarioId");
-
-                    b.Navigation("Cliente");
-
-                    b.Navigation("Mascota");
-
-                    b.Navigation("Veterinario");
                 });
 #pragma warning restore 612, 618
         }
