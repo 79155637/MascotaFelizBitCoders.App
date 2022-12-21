@@ -8,3 +8,15 @@
     <h1 class="display-4">Bienvenido !!</h1>
     <p>MASCOTA FELIZ <a href="http://mascotafeliz.es/">Donde CONSENTIMOS a Tu MASCOTA</a>.</p>
 </div>
+@if (User.Identity.IsAuthenticated)
+{
+    <table class="table table-sm">
+        @foreach (var claim in User.Claims)
+        {
+            <tr>
+                <td>@claim.Type</td>
+                <td>@claim.Value</td>
+            </tr>
+        }
+    </table>
+}

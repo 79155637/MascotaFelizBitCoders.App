@@ -102,6 +102,8 @@ namespace MascotaFeliz.App.FrontEnd.Areas.Identity.Pages.Account
             }
 
             // If we got this far, something failed, redisplay form
+        
+
             return Page();
         }
     }
